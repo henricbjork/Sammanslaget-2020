@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 header {
   display: flex;
@@ -27,14 +28,29 @@ header p {
   background-position: center;
 }
 .headline {
-  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
   font-size: 25px;
   color: white;
   padding: 120px 0px 0px 32px;
 }
-.video iframe {
+.media {
+  display: flex;
+  flex-direction: column;
+  margin-top: 47px;
+}
+.media iframe {
+  order: 1;
   width: 100%;
   height: 210px;
-  margin-top: 47px;
+}
+.text-prompt {
+  order: 2;
+  height: 245px;
+  display: flex;
+  align-items: center;
+}
+.text-prompt p {
+  text-align: center;
+  font-size: 24px;
+  padding: 32px;
 }
