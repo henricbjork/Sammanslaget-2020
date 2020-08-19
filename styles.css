@@ -9,7 +9,10 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 60px;
+  width: 100%;
   padding: 0px 20px 0px 20px;
+  position: absolute;
+  background: #fff;
 }
 header .logo {
   width: 152px;
@@ -19,23 +22,23 @@ header p {
   text-align: right;
 }
 .main-page {
-  height: 606px;
+  height: 100vh;
   width: 100%;
-
   background: url(https://media.giphy.com/media/9r6FZQ5FI8CIYUpLEg/giphy.gif)
     no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 120px 0px 0px 32px;
 }
 .headline {
   font-weight: bold;
   font-size: 25px;
   color: white;
-  padding: 120px 0px 0px 32px;
 }
 .media {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 47px;
 }
 .media iframe {
@@ -57,6 +60,10 @@ header p {
 }
 .magazine {
   order: 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .magazine .mag-half {
   margin-bottom: 24px;
@@ -64,7 +71,7 @@ header p {
 .magazine .mag-half,
 .magazine .mag-full {
   height: 254px;
-  width: 100%;
+  max-width: 375px;
 }
 .video-desc {
   order: 4;
@@ -77,4 +84,50 @@ header p {
   text-align: center;
   font-size: 24px;
   padding: 32px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  header {
+    padding: 20px;
+    height: 110px;
+  }
+  header .logo {
+    width: 343px;
+    height: 69px;
+  }
+  .main-page {
+    padding: 200px 0px 0px 110px;
+  }
+  .headline {
+    font-size: 48px;
+  }
+  .media {
+    width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .media iframe {
+    height: 699px;
+  }
+  .magazine {
+    order: 2;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 47px;
+  }
+  .magazine .mag-half {
+    margin-bottom: 0px;
+  }
+  .magazine .mag-half,
+  .magazine .mag-full {
+    height: 414px;
+    max-width: 610px;
+  }
+  .text-message {
+    order: 4;
+  }
+  .video-desc {
+    order: 3;
+  }
 }
