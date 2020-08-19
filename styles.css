@@ -24,7 +24,6 @@ header p {
 .main-page {
   height: 100vh;
   width: 100%;
-
   background: url(https://media.giphy.com/media/9r6FZQ5FI8CIYUpLEg/giphy.gif)
     no-repeat;
   background-size: cover;
@@ -39,6 +38,7 @@ header p {
 .media {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 47px;
 }
 .media iframe {
@@ -60,6 +60,10 @@ header p {
 }
 .magazine {
   order: 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .magazine .mag-half {
   margin-bottom: 24px;
@@ -67,7 +71,7 @@ header p {
 .magazine .mag-half,
 .magazine .mag-full {
   height: 254px;
-  width: 100%;
+  max-width: 375px;
 }
 .video-desc {
   order: 4;
@@ -97,5 +101,33 @@ header p {
   }
   .headline {
     font-size: 48px;
+  }
+  .media {
+    width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .media iframe {
+    height: 699px;
+  }
+  .magazine {
+    order: 2;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 47px;
+  }
+  .magazine .mag-half {
+    margin-bottom: 0px;
+  }
+  .magazine .mag-half,
+  .magazine .mag-full {
+    height: 414px;
+    max-width: 610px;
+  }
+  .text-message {
+    order: 4;
+  }
+  .video-desc {
+    order: 3;
   }
 }
