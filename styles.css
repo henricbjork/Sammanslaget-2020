@@ -29,11 +29,30 @@ header p {
   background-size: cover;
   background-position: center;
   padding: 120px 0px 0px 32px;
+  color: white;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fromabove {
+  from {
+    top: -10px;
+  }
+  to {
+    top: 0px;
+  }
 }
 .headline {
+  position: relative;
   font-weight: bold;
   font-size: 25px;
-  color: white;
+  opacity: 1;
+  animation: fadein 2s, fromabove 0.5s;
 }
 .media {
   display: flex;
@@ -87,6 +106,12 @@ header p {
 }
 
 @media only screen and (min-width: 768px) {
+  .headline {
+    font-size: 48px;
+  }
+  .main-page {
+    padding: 200px 0px 0px 110px;
+  }
   .media {
     width: 768px;
     margin-left: auto;
@@ -100,7 +125,6 @@ header p {
     flex-direction: column;
     justify-content: space-between;
   }
-
   .magazine .mag-half,
   .magazine .mag-full {
     height: 414px;
@@ -110,20 +134,14 @@ header p {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 1240px) {
-  header {
+  /* header {
     padding: 20px;
     height: 110px;
   }
   header .logo {
     width: 343px;
     height: 69px;
-  }
-  .main-page {
-    padding: 200px 0px 0px 110px;
-  }
-  .headline {
-    font-size: 48px;
-  }
+  } */
   .media {
     width: 1240px;
     margin-left: auto;
