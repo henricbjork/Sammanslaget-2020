@@ -63,7 +63,7 @@ header p {
 .media iframe {
   order: 1;
   width: 375px;
-  height: 211px;
+  height: 240px;
 }
 .text-message {
   order: 2;
@@ -91,6 +91,7 @@ header p {
 .magazine .mag-full {
   height: 254px;
   max-width: 375px;
+  box-shadow: 10px 10px 27px -12px rgba(0, 0, 0, 0.4);
 }
 .video-desc {
   order: 4;
@@ -156,9 +157,16 @@ header p {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 47px;
+    height: 424px;
   }
   .magazine .mag-half {
     margin-bottom: 0px;
+  }
+  .magazine .mag-half:hover,
+  .magazine .mag-full:hover {
+    height: 424px;
+    max-width: 620px;
+    transition: 0.2s ease;
   }
   .text-message {
     order: 4;
