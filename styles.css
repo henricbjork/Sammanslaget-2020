@@ -81,15 +81,10 @@ header p {
 }
 .text-message {
   order: 2;
-  height: 245px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .text-message p {
-  text-align: center;
-  font-size: 24px;
-  padding: 32px;
+  font-size: 16px;
+  padding: 25px;
 }
 .magazine {
   order: 3;
@@ -107,17 +102,32 @@ header p {
   max-width: 375px;
   box-shadow: 10px 10px 27px -12px rgba(0, 0, 0, 0.4);
 }
-.video-desc {
+.instagram {
   order: 4;
-  height: 245px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
+  margin: 47px 0px 47px 0px;
+}
+.instagram img {
+  height: 520px;
+}
+.facebook {
+  order: 5;
+  margin: 15px;
+  margin: 0px 0px 47px 0px;
+}
+.facebook img {
+  height: 200px;
+  box-shadow: 10px 10px 27px -12px rgba(0, 0, 0, 0.4);
+}
+.video-desc {
+  order: 5;
+  padding: 25px;
 }
 .video-desc p {
-  text-align: center;
-  font-size: 24px;
-  padding: 32px;
+  font-size: 16px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -139,6 +149,9 @@ header p {
     height: 414px;
     max-width: 610px;
   }
+  .facebook img {
+    height: 400px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -159,11 +172,13 @@ header p {
     height: 620px;
     width: 100%;
   }
+  .text-message {
+    width: 100%;
+    padding: 25px 0px 25px 0px;
+  }
   .magazine {
-    order: 2;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 47px;
     height: 424px;
   }
   .magazine .mag-half {
@@ -175,10 +190,17 @@ header p {
     max-width: 620px;
     transition: 0.2s ease;
   }
-  .text-message {
-    order: 4;
+  .facebook {
+      width: 100%;  
+      display: flex;
+      justify-content: center;
+  }
+  .facebook img {
+    height: 650px;
+    width: 1100px;
   }
   .video-desc {
-    order: 3;
+    width: 100%;
+    padding: 25px 0px 25px 75px;
   }
 }
