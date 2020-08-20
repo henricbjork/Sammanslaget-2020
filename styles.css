@@ -124,9 +124,6 @@ header p {
     height: 414px;
     max-width: 610px;
   }
-  .facebook img {
-    height: 400px;
-  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -175,14 +172,14 @@ header p {
     max-width: 670px;
     transition: 0.2s ease;
   }
-  .facebook {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .instagram {
+      height: 570px;
   }
-  .facebook img {
-    height: 650px;
-    width: 1100px;
+
+  .instagram img:hover {
+    height:570px;
+    max-width: 670px;
+    transition: 0.2s ease;
   }
   .video-desc {
     width: 1100px;
