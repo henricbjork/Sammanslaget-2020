@@ -38,7 +38,6 @@ header p {
   width: 100%;
   height: 100%;
 }
-
 @media (min-aspect-ratio: 16/9) {
   .head-video {
     height: 300%;
@@ -52,22 +51,6 @@ header p {
     left: -100%;
   }
 }
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fromabove {
-  from {
-    top: -10px;
-  }
-  to {
-    top: 0px;
-  }
-}
 .media {
   display: flex;
   flex-direction: column;
@@ -75,23 +58,26 @@ header p {
   margin-top: 47px;
 }
 .media iframe {
-  order: 1;
   width: 375px;
   height: 240px;
-}
-.text-message {
-  order: 2;
 }
 .text-message p {
   font-size: 16px;
   padding: 25px;
 }
 .magazine {
-  order: 3;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.mag-title {
+  width: 100%;
+  padding: 0px 0px 15px 20px;
+}
+.media-title {
+  width: 100%;
+  padding: 30px 0px 20px 20px;
 }
 .magazine .mag-half {
   margin-bottom: 24px;
@@ -103,28 +89,18 @@ header p {
   box-shadow: 10px 10px 27px -12px rgba(0, 0, 0, 0.4);
 }
 .instagram {
-  order: 4;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  margin: 47px 0px 47px 0px;
+  margin: 0px 0px 47px 0px;
 }
 .instagram img {
   height: 520px;
 }
-.facebook {
-  order: 5;
-  margin: 15px;
-  margin: 0px 0px 47px 0px;
-}
-.facebook img {
-  height: 200px;
-  box-shadow: 10px 10px 27px -12px rgba(0, 0, 0, 0.4);
-}
 .video-desc {
-  order: 5;
-  margin: 25px;
+  margin: 25px 0px 100px 0px;
+  padding: 25px;
 }
 .video-desc p {
   font-size: 16px;
@@ -176,12 +152,20 @@ header p {
     width: 100%;
   }
   .text-message p {
-      padding-left: 0px;
+    padding-left: 0px;
   }
   .magazine {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 424px;
+  }
+  .mag-title {
+    width: 100%;
+    padding: 0px 0px 15px 40px;
+  }
+  .media-title {
+    width: 100%;
+    margin: 20px 0px 30px 40px;
   }
   .magazine .mag-half {
     margin-bottom: 0px;
@@ -193,9 +177,9 @@ header p {
     transition: 0.2s ease;
   }
   .facebook {
-      width: 100%;  
-      display: flex;
-      justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .facebook img {
     height: 650px;
