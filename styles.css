@@ -143,6 +143,13 @@ header p {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 1240px) {
+  header {
+    height: 80px;
+  }
+  header .logo {
+    width: 202px;
+    height: 61px;
+  }
   .media {
     width: 1240px;
     margin-left: auto;
