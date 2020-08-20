@@ -13,6 +13,7 @@ header {
   padding: 0px 20px 0px 20px;
   position: absolute;
   background: #fff;
+  z-index: 1;
 }
 header .logo {
   width: 152px;
@@ -22,14 +23,34 @@ header p {
   text-align: right;
 }
 .main-page {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
   height: 100vh;
+}
+.head-video {
+  position: relative;
+  left: 0;
+  top: 0;
   width: 100%;
-  background: url(https://media.giphy.com/media/9r6FZQ5FI8CIYUpLEg/giphy.gif)
-    no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 120px 0px 0px 32px;
-  color: white;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .head-video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .head-video {
+    width: 300%;
+    left: -100%;
+  }
 }
 @keyframes fadein {
   from {
@@ -46,13 +67,6 @@ header p {
   to {
     top: 0px;
   }
-}
-.headline {
-  position: relative;
-  font-weight: bold;
-  font-size: 25px;
-  opacity: 1;
-  animation: fadein 2s, fromabove 0.5s;
 }
 .media {
   display: flex;
@@ -107,12 +121,6 @@ header p {
 }
 
 @media only screen and (min-width: 768px) {
-  .headline {
-    font-size: 48px;
-  }
-  .main-page {
-    padding: 200px 0px 0px 110px;
-  }
   .media {
     width: 768px;
     margin-left: auto;
@@ -135,14 +143,6 @@ header p {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 1240px) {
-  /* header {
-    padding: 20px;
-    height: 110px;
-  }
-  header .logo {
-    width: 343px;
-    height: 69px;
-  } */
   .media {
     width: 1240px;
     margin-left: auto;
